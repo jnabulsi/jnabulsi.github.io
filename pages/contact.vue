@@ -1,6 +1,6 @@
 <template>
   <div class="contact-container">
-    <img src="/img/center.webp" alt="Home Image" class="home-image" />
+    <img src="/img/contactphoto.png" alt="Home Image" class="home-image" />
     <ContactForm />
   </div>
 </template>
@@ -42,4 +42,3 @@ import ContactForm from '~/components/ContactForm.vue';
   }
 }
 </style>
-
