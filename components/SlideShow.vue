@@ -45,11 +45,13 @@ const currentIndex = ref(0)
 
 // Previous Slide
 const prevSlide = () => {
+  console.log("Previous Slide Clicked");
   currentIndex.value = (currentIndex.value - 1 + images.value.length) % images.value.length
 }
 
 // Next Slide
 const nextSlide = () => {
+  console.log("Next Slide Clicked");
   currentIndex.value = (currentIndex.value + 1) % images.value.length
 }
 </script>
