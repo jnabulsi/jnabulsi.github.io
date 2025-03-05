@@ -3,12 +3,11 @@
     <SlideShow />
     <p class="photo-text">
       For years, Tess has been deeply immersed in the world of video design, developing her craft with tools
-      like After Effects and Premiere Pro and Abode Illustrator. She thrives in the realm of motion graphics, seamlessly
-      blending illustrations from Illustrator to breathe life into my creations. She is here to bring stories to life
-      through the magic of moving images.
+      like After Effects, Premiere Pro, and Adobe Illustrator. She thrives in the realm of motion graphics, seamlessly
+      blending illustrations into motion to bring stories to life.
     </p>
 
-    <p class="photo-title">Dreams (2020)</p>
+    <h2 class="section-title">Dreams (2020)</h2>
 
     <div class="media-section">
       <!-- Video -->
@@ -24,27 +23,14 @@
         <img v-for="(image, index) in images" :key="index" :src="image" alt="Gallery Image" class="grid-image" />
       </div>
     </div>
+
     <p class="photo-text">
-      About Work ContactFor years, Tess has been deeply immersed in the world of video design, developing her craft with
-      tools
-      like After Effects and Premiere Pro and Abode Illustrator. She thrives in the realm of motion graphics, seamlessly
-      blending illustrations from Illustrator to breathe life into my creations. She is here to bring stories to life
-      through the magic of moving images.
-      Dreams (2020)
-      With a surrealist approach, Dreams (2020) explores the euphoric and transformative nature of Dreams through
-      portrait
-      photography. Through experimentation with multiple techniques and materials, laser cutting techniques provided
-      precision aesthetics and enhanced the surreal experience, where the circular shape symbolized fluidity and
+      <strong>Dreams (2020)</strong> explores the euphoric and transformative nature of dreams through portrait
+      photography.
+      Using laser cutting techniques, a surreal experience was created—where circular shapes symbolized fluidity and
       freedom.
-      Additionally, there was a focus on traditional portraiture, emphasising facial expressions and body language to
-      convey
-      a dreamlike atmosphere. Allowing deeper exploration of human emotions within the dream context, final stages
-      created a series of laser-cut portraits suspended within wooden boxes, creating an immersive,3D experience for
-      viewers, highlighting the transition between dream states. Dreams(2020) represents different aspects such as
-      space, love, and peace. Symbolism, including natural motifs and color schemes, was utilised to create a cohesive
-      and impactful arrangement. Meticulously planned costumes, props, and makeuplooks for the models conveyed
-      the projected affective experience. High-end studio equipment combined with sophisticated post-processing
-      software augmented the desired aesthetic.
+      The final work featured a series of laser-cut portraits suspended within wooden boxes, forming an immersive 3D
+      experience.
     </p>
   </div>
 </template>
@@ -62,61 +48,115 @@ const images = ref([
 </script>
 
 <style scoped>
+/* General Styling */
 .photo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.photo-text {
-  font-size: 2rem;
-  line-height: 1.6;
+  padding: 40px 20px;
   text-align: center;
-  margin-top: 70px;
-  max-width: 80%;
 }
 
 .photo-title {
-  font-size: 4rem;
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
 
+.photo-text {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 50px;
+  max-width: 60%;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin: 40px 0 20px;
+  font-weight: bold;
+}
+
+/* Media Section */
 .media-section {
   display: flex;
   gap: 40px;
   padding: 40px;
   align-items: stretch;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
+/* Video Styling */
 .video-container {
   flex: 2;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 720px;
+  max-width: 600px;
 }
 
 video {
   width: 100%;
-  height: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Image Grid - FIXED */
 .image-grid {
   flex: 1;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  gap: 20px;
-  height: 700px;
+  gap: 15px;
+  max-width: 400px;
+  height: 400px;
 }
 
 .grid-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .photo-title {
+    font-size: 2.5rem;
+  }
+
+  .photo-text {
+    font-size: 1.4rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .media-section {
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .video-container {
+    max-width: 100%;
+  }
+
+  /* Ensure the image grid stacks properly */
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    height: auto;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* Switch to a single-column layout on very small screens */
+  .image-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
 </style>
 

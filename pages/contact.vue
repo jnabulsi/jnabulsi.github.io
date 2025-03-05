@@ -1,7 +1,7 @@
 <template>
   <div class="contact-container">
     <img src="/img/contactphoto.png" alt="Home Image" class="home-image" />
-    <ContactForm />
+    <ContactForm class="contact-form" />
   </div>
 </template>
 
@@ -17,28 +17,43 @@ import ContactForm from '~/components/ContactForm.vue';
   gap: 150px;
   padding: 50px 20px;
   width: 100%;
-  margin-left: calc(-15%);
+  flex-wrap: wrap;
 }
 
+/* Image Styling */
 .home-image {
-  max-width: 40%;
+  max-width: 35%;
   height: auto;
 }
 
-/* Responsive adjustments */
+/* Form Styling */
+.contact-form {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
     align-items: center;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
   }
 
   .home-image {
-    max-width: 80%;
+    display: none;
   }
 
-  ContactForm {
+  .contact-form {
     width: 100%;
-    max-width: 500px;
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 }
 </style>
