@@ -3,7 +3,9 @@
     <NuxtLink v-if="!isIndexPage" to="/" class="logo-link">
       <img v-if="!isIndexPage" src="/img/logo.webp" alt="Logo" class="logo" />
     </NuxtLink>
-    <NavBar />
+    <div class="nav-container">
+      <NavBar />
+    </div>
   </header>
 </template>
 
@@ -25,18 +27,48 @@ watch(route, (newRoute) => {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  min-height: 180px;
   position: relative;
-  padding: 20px;
 }
 
+/* Logo always stays on the left */
 .logo-link {
   position: absolute;
-  top: 40px;
   left: 60px;
+  top: 40px;
 }
 
 .logo {
   width: 200px;
   height: auto;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .header {
+    min-height: 120px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    min-height: 120px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+}
 </style>
+

@@ -2,7 +2,7 @@
   <div class="vfx-container">
     <div class="video-container">
       <video autoplay loop muted playsinline>
-        <source src="/video/thevideo.mp4" type="video/mp4" />
+        <source src="/video/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>
@@ -34,8 +34,8 @@ import ProjectPane from '~/components/ProjectPane.vue';
 
 <style scoped>
 .video-container {
-  width: 100vw;
-  height: 100vh;
+  width: 70%;
+  height: 70%;
   overflow: hidden;
 }
 

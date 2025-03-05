@@ -2,7 +2,9 @@
   <nav>
     <ul>
       <li v-for="item in navItems" :key="item.path">
-        <NuxtLink :to="item.path" exact-active-class="active">{{ item.name }}</NuxtLink>
+        <NuxtLink :to="item.path" exact-active-class="active">
+          {{ item.name }}
+        </NuxtLink>
       </li>
     </ul>
   </nav>
@@ -19,12 +21,10 @@ const navItems = [
 <style scoped>
 nav {
   display: flex;
-  justify-content: center;
   align-items: center;
-  width: 100%;
-  padding: 40px;
 }
 
+/* Desktop styles */
 ul {
   display: flex;
   gap: 60px;
@@ -47,4 +47,27 @@ a:hover,
 a.active {
   color: #2c3e50;
 }
+
+/* Tablet - Reduce gap and text size */
+@media (max-width: 1024px) {
+  ul {
+    gap: 40px;
+  }
+
+  li {
+    font-size: 36px;
+  }
+}
+
+/* Mobile - Further reduce size and spacing */
+@media (max-width: 768px) {
+  ul {
+    gap: 20px;
+  }
+
+  li {
+    font-size: 24px;
+  }
+}
 </style>
+
