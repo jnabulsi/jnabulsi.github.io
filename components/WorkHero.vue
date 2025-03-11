@@ -71,7 +71,7 @@ const props = defineProps({
 
 .text {
   font-size: 1.7rem;
+  line-height: 1.5;
   margin-top: 1rem;
 }
 </style>
-

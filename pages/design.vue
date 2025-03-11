@@ -1,107 +1,54 @@
 <template>
-  <div class="design-container">
-    <img src="/img/vfx.webp" alt="Design" class="vfx-image" />
+  <div class="photo-container">
 
-    <p class="design-text">
-      Over the last few years, I have immersed myself in the world of 3D design, learning tools like
-      Maya, Blender, Illustrator, Substance Painter, Photoshop, and Unity. From texturing and modeling to shading and
-      sculpting, my aim is to bring digital creations to life. I have explored the exciting realm of game development,
-      blending creativity with technical expertise to craft immersive experiences.
-    </p>
+    <WorkHero videoSrc="/video/" title="3D & Game Design"
+      subHeading="[I work in Blender, Maya, Photoshop, Substance Painter, Unity and Visual Studio Code]" text="Over the last few years I have immersed herself in the world of 3D design, learning tools like Maya, Blender, Illustrator,
+Substance Painter, Photoshop, and Unity.From texturing and modeling to shadingand sculpting, my aim is to bring digital
+creations to life. I have explored the exciting realm of game development,blending creativity with technical expertise to craft
+immersive experience." />
 
-    <img src="/img/vfxwide.webp" alt="design2" class="design-image" />
+    <div class="projects">
+      <p class="section-title">Projects</p>
 
-    <div class="skills">
-      <h1>Skills</h1>
-      <ul>
-        <li>3D modelling (Maya, Blender, Cinema 4D)</li>
-        <li>Texturing (Substance Painter, Photoshop, Illustrator, Blender, and Maya internally)</li>
-        <li>UV unwrapping</li>
-        <li>Rigging</li>
-        <li>Animating</li>
-        <li>Weight painting</li>
-        <li>Compositing video into 3D software</li>
-        <li>Sculpting</li>
-        <li>C# code for game object triggers</li>
-        <li>Unity game building (lighting, sound, triggers, post-processing, camera integration)</li>
-      </ul>
+      <PhotoProjects imageSrc="/img/Design/design1.png" title="Reminisce" subHeading="Click through dialogue Game" text="3D modelling, UV unwrapping, Sculpting : Maya
+Texturing : Photoshop
+Sound Design : Reaper
+Game design : Unity
+Object Trigger Scripts : Visual Studio" />
+      <PhotoProjects imageSrc="/img/Design/design2.png" title="In a field of flowers"
+        subHeading="Video Composited into 3D envrioment" text="3D modelling, UV unwrapping,
+Sculpting & Texturing: Blender
+Real life footage: Green Screen & DSLR" />
+      <PhotoProjects imageSrc="/img/Design/design3.png" title="Dancing Jellyfish" subHeading="3D animation" text="3D modelling, UV unwrapping,
+Sculpting & Texturing: Blender" />
+      <PhotoProjects imageSrc="/img/Design/design4.png" title="I must be Dreaming Computer" subHeading="3D animation"
+        text="3D modelling, UV unwrapping,
+Sculpting, Texturing and Compositing: Blender
+Video Design : After effects" />
     </div>
   </div>
 </template>
 
+<script setup>
+import WorkHero from '~/components/WorkHero.vue';
+import PhotoProjects from '~/components/PhotoProjects.vue';
+</script>
+
 <style scoped>
-.design-container {
+.photo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
-  margin: 0 auto;
 }
 
-.design-image,
-.vfx-image {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-.design-text {
-  font-size: 1.8rem;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 50px;
-  max-width: 60%;
-}
-
-.skills {
+.section-title {
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: italic;
   text-align: left;
-  width: 70%;
-  max-width: 800px;
-  margin: 40px auto;
-}
-
-.skills h1 {
-  font-size: 3rem;
-  margin-bottom: 15px;
-}
-
-.skills ul {
-  padding-left: 20px;
-  color: #3b3d3f;
-  font-size: 1.8rem;
-  line-height: 1.5;
-}
-
-@media (max-width: 768px) {
-  .design-text {
-    font-size: 1.5rem;
-    margin-top: 30px;
-  }
-
-  .skills {
-    width: 90%;
-  }
-
-  .skills h1 {
-    font-size: 2.5rem;
-  }
-
-  .skills ul {
-    font-size: 1.6rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .design-text {
-    font-size: 1.4rem;
-  }
-
-  .skills h1 {
-    font-size: 2rem;
-  }
-
-  .skills ul {
-    font-size: 1.4rem;
-  }
+  padding-left: 15%;
+  margin-bottom: 60px;
 }
 </style>

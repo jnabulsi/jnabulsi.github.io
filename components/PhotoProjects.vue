@@ -33,38 +33,49 @@ const props = defineProps({
 <style scoped>
 .photo-project {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 30px;
-  max-width: 70%;
+  max-width: 80%;
   margin: 0 auto;
   padding-bottom: 80px;
 }
 
 .project-image {
-  width: 40%;
+  flex-shrink: 0;
+  width: auto;
+  max-width: 65%;
   height: auto;
+  object-fit: cover;
 }
 
 .text-container {
-  flex: 1;
+  flex-grow: 1;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .title {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
 }
 
 .subHeading {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
+  margin-top: 0rem;
 }
 
 .text {
-  font-size: 1.2rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
+  white-space: pre-wrap;
 }
 
 @media (max-width: 768px) {
