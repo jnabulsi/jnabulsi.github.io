@@ -36,7 +36,6 @@ const aboutText = [
   object-fit: contain;
 }
 
-/* Text Content Container */
 .about-content {
   flex: 3;
   max-width: 70%;
@@ -44,24 +43,26 @@ const aboutText = [
   flex-direction: column;
 }
 
-/* Individual Paragraph Styling */
 .about-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   line-height: 1.6;
   text-align: left;
   margin-bottom: 5px;
   color: #4873b4;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 768px) {
   .about-container {
     flex-direction: column;
     text-align: center;
   }
 
+  .about-content {
+    max-width: 95%;
+  }
+
   .about-text {
-    max-width: 90%;
+    max-width: 100%;
   }
 
   .tess-image {
@@ -69,4 +70,3 @@ const aboutText = [
   }
 }
 </style>
-

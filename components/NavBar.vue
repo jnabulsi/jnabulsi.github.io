@@ -68,6 +68,9 @@ a.active {
   li {
     font-size: 24px;
   }
+
+  nav {
+    align-content: right;
+  }
 }
 </style>
-

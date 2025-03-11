@@ -81,17 +81,32 @@ const props = defineProps({
 @media (max-width: 768px) {
   .photo-project {
     flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 20px;
   }
 
   .project-image {
-    width: 80%;
-    max-width: 100%;
+    width: 100%;
+    max-width: 90%;
   }
 
   .text-container {
     width: 100%;
     text-align: center;
+    padding: 0 15px;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subHeading {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
   }
 }
 </style>

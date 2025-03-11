@@ -52,4 +52,16 @@ import PhotoProjects from '~/components/PhotoProjects.vue';
   padding-left: 15%;
   margin-bottom: 60px;
 }
+
+@media (max-width: 768px) {
+  .photo-container {
+    padding: 0 3%;
+  }
+
+  .section-title {
+    font-size: 4rem;
+    text-align: center;
+    padding: 0;
+  }
+}
 </style>

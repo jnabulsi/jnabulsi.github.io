@@ -74,4 +74,28 @@ const props = defineProps({
   line-height: 1.5;
   margin-top: 1rem;
 }
+
+@media (max-width: 768px) {
+  .work-video {
+    width: 90%;
+  }
+
+  .text-container {
+    width: 80%;
+  }
+
+  .title {
+    text-align: center;
+    font-size: 4rem;
+    padding-left: 0%;
+  }
+
+  .subHeading {
+    font-size: 1.6rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+}
 </style>
