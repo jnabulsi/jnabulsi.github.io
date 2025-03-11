@@ -1,1 +1,0 @@
-import{p as a,_ as t,c,a as e,o,y as n}from"./C6mp0T_U.js";const r=a("/img/center.webp"),i={},m={class:"image-container"};function _(l,s){return o(),c("div",m,s[0]||(s[0]=[e("img",{src:n,alt:"Tess",class:"tess-image"},null,-1),e("img",{src:r,alt:"Home Image",class:"home-image"},null,-1)]))}const p=t(i,[["render",_],["__scopeId","data-v-fb6faed6"]]);export{p as default};

@@ -1,162 +1,54 @@
 <template>
   <div class="photo-container">
-    <SlideShow />
-    <p class="photo-text">
-      For years, Tess has been deeply immersed in the world of video design, developing her craft with tools
-      like After Effects, Premiere Pro, and Adobe Illustrator. She thrives in the realm of motion graphics, seamlessly
-      blending illustrations into motion to bring stories to life.
-    </p>
 
-    <h2 class="section-title">Dreams (2020)</h2>
+    <WorkHero videoSrc="/video/sculptures.mp4" title="Photography"
+      subHeading="[I work in Lightroom, Photoshop and with a DSLR]" text="Over the years, I’ve developed a deep passion for photography, particularly through capturing people
+with a surrealistic lens. I love the idea that with a camera, a computer, and a few creative tools, I can
+bring my imagination to life and transform everyday moments into something extraordinary." />
 
-    <div class="media-section">
-      <!-- Video -->
-      <div class="video-container">
-        <video autoplay loop muted playsinline>
-          <source src="/video/sculptures.mp4" type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
-      </div>
+    <div class="projects">
+      <p class="section-title">Projects</p>
 
-      <!-- Image Grid -->
-      <div class="image-grid">
-        <img v-for="(image, index) in images" :key="index" :src="image" alt="Gallery Image" class="grid-image" />
-      </div>
+      <PhotoProjects imageSrc="/img/Photography/photo1.png" title="Dreams" subHeading="Photographic Sculptures" text="Dreams (2020) explores the transformative nature of dreams
+through surrealist portrait photography. Using laser cutting
+and traditional portraiture, it creates a dreamlike atmosphere
+with suspended 3D portraits. The project symbolizes themes
+of space, love, and peace, enhanced by carefully crafted
+costumes, props, and makeup." />
+      <PhotoProjects imageSrc="/img/Photography/photo2.png" title="Blossom Bonds: Portraits of Friends"
+        subHeading="Photographic Series" text="Similar to friendships in my life, nature possess the
+remarkable ability to heal, rejuvenate,and uplift my spirit.
+They serve as constant reminder of the beauty that surrounds us." />
+      <PhotoProjects imageSrc="/img/Photography/photo3.png" title="Multi Portraits" subHeading="Photographic Series"
+        text="Portraiture project focused on refining Photoshop masking skills.
+Through experimentation and attention to detail, I aim to transform
+raw images into polished, creative compositions" />
+
+
     </div>
-
-    <p class="photo-text">
-      Dreams (2020) explores the euphoric and transformative nature of dreams through portrait
-      photography.
-      Using laser cutting techniques, a surreal experience was created—where circular shapes symbolized fluidity and
-      freedom.
-      The final work featured a series of laser-cut portraits suspended within wooden boxes, forming an immersive 3D
-      experience.
-    </p>
   </div>
 </template>
 
 <script setup>
-import SlideShow from '~/components/SlideShow.vue';
-import { ref } from 'vue';
-
-const images = ref([
-  '/img/photography/2.jpg',
-  '/img/photography/10.jpg',
-  '/img/photography/4.jpg',
-  '/img/photography/15.jpg',
-]);
+import WorkHero from '~/components/WorkHero.vue';
+import PhotoProjects from '~/components/PhotoProjects.vue';
 </script>
 
 <style scoped>
-/* General Styling */
 .photo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 40px 20px;
   text-align: center;
-}
-
-.photo-title {
-  font-size: 3rem;
-  margin-bottom: 20px;
-}
-
-.photo-text {
-  font-size: 1.8rem;
-  line-height: 1.6;
-  text-align: center;
-  margin-top: 50px;
-  max-width: 60%;
 }
 
 .section-title {
-  font-size: 2.5rem;
-  margin: 40px 0 20px;
-  font-weight: bold;
-}
-
-/* Media Section */
-.media-section {
-  display: flex;
-  gap: 40px;
-  padding: 40px;
-  align-items: stretch;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Video Styling */
-.video-container {
-  flex: 2;
-  max-width: 600px;
-}
-
-video {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Image Grid - FIXED */
-.image-grid {
-  flex: 1;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  gap: 15px;
-  max-width: 400px;
-  height: 400px;
-}
-
-.grid-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .photo-title {
-    font-size: 2.5rem;
-  }
-
-  .photo-text {
-    font-size: 1.4rem;
-  }
-
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .media-section {
-    flex-direction: column;
-    padding: 20px;
-    gap: 20px;
-  }
-
-  .video-container {
-    max-width: 100%;
-  }
-
-  /* Ensure the image grid stacks properly */
-  .image-grid {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    height: auto;
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-
-  /* Switch to a single-column layout on very small screens */
-  .image-grid {
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-  }
+  font-size: 8rem;
+  font-weight: 100;
+  font-style: italic;
+  text-align: left;
+  padding-left: 15%;
+  margin-bottom: 60px;
 }
 </style>
-
