@@ -29,14 +29,14 @@ body {
 
 @font-face {
   font-family: 'Helvetica Neue LT Std';
-  src: url('@/assets/fonts/Helvetica Neue LT Std 46 Light Italic.otf') format('opentype');
+  src: url('@/public/fonts/italic.otf') format('opentype');
   font-weight: 300;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Helvetica Neue LT Std';
-  src: url('@/assets/fonts/HelveticaNeue Light.ttf') format('truetype');
+  src: url('@/public/fonts/light.ttf') format('truetype');
   font-weight: 300;
   font-style: normal;
 }
