@@ -19,12 +19,12 @@ Text Icons : Illustrator" />
       <PhotoProjects imageSrc="/img/vfx3.webp" title="I must be dreaming" subHeading="Short Film, VFX artist" text="3D Animations : Blender
 Effects, Rotoscoping and 2D Animation: After effects
 Masking : Premier Pro and Photoshop" />
-      <PhotoProjects imageSrc="/img/vfx4.webp" title="BORDERLINE" subHeading="Theatrical Show, AV" text="Motion Graphics :After Effects
+      <PhotoProjects imageSrc="/img/vfx6.webp" title="BORDERLINE" subHeading="Theatrical Show, AV" text="Motion Graphics :After Effects
 Projection Mapping : MadMapper
 Queues : Qlab" />
       <PhotoProjects imageSrc="/img/vfx5.webp" title="Evenings with Janine" subHeading="Televsion show, Editor" text="Sequencing multicam footage, effects,
 masking and credits : Premier Pro" />
-      <PhotoProjects imageSrc="/img/vfx6.webp" title="First Run" subHeading="Televsion show, Editor" text="Sequencing multicam footgae, effects,
+      <PhotoProjects imageSrc="/img/vfx4.webp" title="First Run" subHeading="Televsion show, Editor" text="Sequencing multicam footgae, effects,
 masking and credits : Premier Pro" />
     </div>
   </div>

@@ -63,4 +63,10 @@ const hover = ref(false);
 .work-pane:hover .overlay {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .overlay {
+    opacity: 1;
+  }
+}
 </style>

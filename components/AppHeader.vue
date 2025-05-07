@@ -75,4 +75,3 @@ watch(route, (newRoute) => {
   }
 }
 </style>
-

@@ -17,7 +17,7 @@ import ContactForm from '~/components/ContactForm.vue';
   gap: 80px;
   padding: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
   flex-wrap: wrap;
 }
